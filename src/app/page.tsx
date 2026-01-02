@@ -4,7 +4,6 @@ import { toast } from "sonner";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 export default function Home() {
   const [state, setState] = useState<string>("hidden");
