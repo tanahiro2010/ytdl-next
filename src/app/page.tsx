@@ -47,7 +47,7 @@ export default function Home() {
           <a href={url} className={`${state}`} target="_blank" rel="noopener noreferrer">
             <Button type="button" className="mt-2 w-full">Open</Button>
           </a>
-          <Button className="mt-2 w-full" >Action</Button>
+          <Button className="mt-2 w-full">Execute</Button>
         </form>
       </Card>
     </main>
