@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import "@/styles/globals.css";
@@ -84,6 +85,8 @@ export default function RootLayout({
           {children}
           <Toaster richColors closeButton position="top-right" />
         </ThemeProvider>
+
+        <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID || ""} />
       </body>
     </html>
   );
