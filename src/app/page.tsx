@@ -36,18 +36,18 @@ export default function Home() {
     setUrl(data.data.download_url);
   };
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold mb-8">Welcome to YouTube Downloader</h1>
-      <p className="text-lg mb-4">
+    <main className="flex min-h-screen flex-col items-center justify-center p-6 md:p-24">
+      <h1 className="text-2xl md:text-4xl font-bold mb-6 md:mb-8 text-center">Welcome to YouTube Downloader</h1>
+      <p className="text-base md:text-lg mb-4 text-center max-w-2xl">
         Use our free online tool to download YouTube videos easily and quickly.
       </p>
-      <Card className="w-full max-w-md p-4">
-        <form onSubmit={handleSubmit}>
-          <Input type="text" name="url" placeholder="Enter YouTube video URL" />
-          <a href={url} className={`${state}`} target="_blank" rel="noopener noreferrer">
+      <Card className="w-full max-w-xl md:max-w-md p-4">
+        <form onSubmit={handleSubmit} className="space-y-2">
+          <Input className="w-full" type="text" name="url" placeholder="Enter YouTube video URL" />
+          <a href={url} className={`${state} block`} target="_blank" rel="noopener noreferrer">
             <Button type="button" className="mt-2 w-full">Open</Button>
           </a>
-          <Button className="mt-2 w-full">Execute</Button>
+          <Button type="submit" className="mt-2 w-full">Execute</Button>
         </form>
       </Card>
     </main>
